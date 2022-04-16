@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Display from '../Display/Display';
+import './Watch.css'
 
 const Watch = () => {
     const [steps, setSteps] = useState(0);
@@ -14,10 +15,10 @@ const Watch = () => {
     }, [steps])
 
     return (
-        <div style={{ border: '2px solid greey', margin: '20px' }}>
+        <div style={{ border: '2px solid aqua', color: 'hotpink', margin: '20px' }}>
             <h2>This is my smart Watch</h2>
             <h3>My Current Steps watch: {steps}</h3>
-            <button onClick={increaseSteps}>Click me......</button>
+            <button className='button' onClick={increaseSteps}>Click me......</button>
             <Display name="germin" steps={steps}></Display>
         </div>
     );
